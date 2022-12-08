@@ -5,102 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#bb3838">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="./cadastro.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
 </head>
 
-<body id="body">
-    <nav>
-        <div class="logo">
-            <h1 id="h1">Cadastro</h1>
-        </div>
-        <div class="bar">
-            <ul>
-                <li><a href="./index.html" id="a">Home</a></li>
-                <li><a href="" id="b">Sobre Nós</a></li>
-                <li><a href="" id="c">|</a></li>
-                <li><a href="./login.html" id="d">Login</a></li>
-                <li><a href="./cadastro.html" id="e">Cadastro</a></li>
-            </ul>
-        </div>
-        <div class="temazin">
-            <select id="changeTheme" onchange="mudar()">
-                <option value="">Mudar Tema</option>
-                <option value="1">Dark</option>
-                <option value="2">Light</option>
-                <option value="3">Blue</option>
-            </select>
-        </div>
-    </nav>
-
-    <!-- Fomrulário -->
-    <div class="form">
-        <div class="titulo">
-            <h2>Cadaste-se</h2>
-        </div>
+<body>
+    <div class="esquerda" id="left">
+        <button onclick="mudar()">Teste</button>
+    </div>
+    <div class="direita" id="right">
         <div class="container">
-            <div class="cont">
-                <div class="secao1">
-                    <label for="nome">Nome</label>
-                    <input type="email" placeholder="Type your name">
+            <div class="titulo">
+                <h2>Cadastre-se</h2>
+            </div>
+            <div class="conteudo">
+                <div class="cont">
+                    <label>Nome</label>
+                    <input type="text">
                 </div>
-                <div class="secao2">
-                    <label for="email">Email</label>
-                    <input type="email" placeholder="Type your email">
+                <div class="cont">
+                    <label>Email</label>
+                    <input type="text">
+                </div>
+                <div class="cont">
+                    <label>Senha</label>
+                    <input type="password">
+                </div>
+                <div class="cont">
+                    <label>Confirmação de Senha</label>
+                    <input type="password">
                 </div>
             </div>
-
-            <div class="cont">
-                <div class="secao1">
-                    <label for="password">Senha</label>
-                    <input type="password" placeholder="Type your password">
-                </div>
-
-                <div class="secao2">
-                    <label for="password">Confirme sua Senha</label>
-                    <input type="password" placeholder="Type your password">
-                </div>
-            </div>
-
-            <div class="centro">
-                <button>Entrar</button>
-            </div>
+            <div class="final"></div>
         </div>
     </div>
-
 </body>
 
 </html>
+
 <script>
     function mudar() {
-        var tema = Number(changeTheme.value)
-
-        var bod = document.getElementById("body")
-        var h1 = document.getElementById("h1")
-
-        var a = document.getElementById("a")
-        var b = document.getElementById("b")
-        var c = document.getElementById("c")
-        var d = document.getElementById("d")
-        var e = document.getElementById("e")
-
-        if (tema == 1) {
-            bod.style.backgroundColor = "#383838"
-            h1.style.color = "#f5f5f5"
-        }
-        else if (tema == 2) {
-            bod.style.backgroundColor = "#f5f5f5"
-            h1.style.color = "#383838"
-        } else if (tema == 3) {
-            bod.style.backgroundColor = "#8c9cf8"
-            h1.style.color = "#383838"
-            a.style.color="#383838"
-            b.style.color="#383838"
-            c.style.color="#383838"
-            d.style.color="#383838"
-            e.style.color="#383838"
-        }
+        document.getElementById('left').classList.toggle('changeColor')
+        document.getElementById('right').classList.toggle('changeColor1')
     }
-
 
 </script>
