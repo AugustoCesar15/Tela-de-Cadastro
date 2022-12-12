@@ -8,46 +8,60 @@
     <meta name="theme-color" content="#bb3838">
     <title>Cadastro</title>
     <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="icon" href="./assets/add.svg">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
-    <div class="esquerda" id="left">
-        <button onclick="mudar()">Teste</button>
-    </div>
-    <div class="direita" id="right">
-        <div class="container">
-            <div class="titulo">
-                <h2>Cadastre-se</h2>
+    <div class="geral">
+        <div class="esquerda" id="left">
+            <!-- <button onclick="mudar()">Teste</button> -->
+            <img src="assets/add.svg" alt="">
+        </div>
+        <div class="direita" id="right">
+            <div class="container">
+                <div class="titulo">
+                    <h2 id="tituloo">Cadastre-se</h2>
+                    <span class="material-symbols-outlined" onclick="MudarTema()">
+                        settings_brightness
+                    </span>
+                </div>
+                <div class="conteudo">
+                    <div class="cont">
+                        <label>Nome</label>
+                        <input type="text">
+                    </div>
+                    <div class="cont">
+                        <label>Email</label>
+                        <input type="text">
+                    </div>
+                    <div class="cont">
+                        <label>CPF</label>
+                        <input type="number">
+                    </div>
+                    <div class="cont">
+                        <label>Telefone</label>
+                        <input type="number">
+                    </div>
+                    <div class="cont">
+                        <label>Senha</label>
+                        <input type="password">
+                    </div>
+                    <div class="cont">
+                        <label>Confirmação de Senha</label>
+                        <input type="password">
+                    </div>
+                </div>
+                <div class="final">
+                    <button>Enviar</button>
+                </div>
             </div>
-            <div class="conteudo">
-                <div class="cont">
-                    <label>Nome</label>
-                    <input type="text">
-                </div>
-                <div class="cont">
-                    <label>Email</label>
-                    <input type="text">
-                </div>
-                <div class="cont">
-                    <label>Senha</label>
-                    <input type="password">
-                </div>
-                <div class="cont">
-                    <label>Confirmação de Senha</label>
-                    <input type="password">
-                </div>
-            </div>
-            <div class="final"></div>
         </div>
     </div>
+    <div class="saida"></div>
 </body>
 
 </html>
 
-<script>
-    function mudar() {
-        document.getElementById('left').classList.toggle('changeColor')
-        document.getElementById('right').classList.toggle('changeColor1')
-    }
-
-</script>
+<script src="./js/index.js"></script>

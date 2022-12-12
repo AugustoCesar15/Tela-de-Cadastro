@@ -7,33 +7,53 @@
     --clr2: #bb3838;
 }
 
+@font-face {
+    font-family: 'Titulo';
+    src: url('../assets/Afterglow-Regular.ttf');
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Ubuntu';
+    transition: all 1s;
 }
 
 body{
     width: 100%;
     height: 100vh;
     background-color: var(--clr);
+}
+.geral{
+    width: 100%;
+    height: 85vh;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;   
+}
+.saida{
+    width: 80%;
+    height: 10vh;
 }
 
 .esquerda {
     width: 48%;
     height: 70vh;
-    background-color: var(--clr2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.esquerda img{
+    width: 90%;
+    height: auto;
 }
 
 
 .direita {
     width: 48%;
     height: 70vh;
-    background-color: var(--clr1);
 }
 
 .direita .container{
@@ -57,6 +77,24 @@ body{
     align-items: center;
 }
 
+.direita .container .titulo{
+    justify-content: space-between;
+}
+
+.direita .container .titulo h2{
+    color: var(--clr);
+    font-size: 3em;
+    font-family: 'Titulo';
+    font-weight: normal;
+}
+
+.direita .container .titulo span{
+    color: var(--clr);
+    font-size: 2em;
+    cursor: pointer;
+}
+
+
 .direita .container .conteudo{
     height: 45vh;
     justify-content: space-around;
@@ -64,25 +102,58 @@ body{
 }
 
 .direita .container .conteudo .cont{
+    width: 45%;
+    height: 55px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
 }
-
-.direita .container .titulo h2{
-    font-size: 2em;
+.direita .container .conteudo .cont label{
+    color: var(--clr);
+    margin-bottom: 5px;
+}
+.direita .container .conteudo .cont input{
+    width: 95%;
+    height: 35px;
+    border-radius: 8px;
+    border: 2px solid var(--clr);
+    outline: none;
+    padding-left: 5px;
+    background-color: transparent;
+    color: var(--clr);
 }
 
 
 
 
+.direita .container .final {
+    justify-content: center;
+}
+.direita .container .final button{
+    width: 30%;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid var(--clr);
+    background-color: var(--clr);
+    color: var(--clr2);     
+    font-size: 1.15em;
+    cursor: pointer;
+}
 
-
+.direita .container .final button:hover{
+    background-color: transparent;
+    color: var(--clr);
+}
 
 .changeColor {
     background-color: var(--clr1);
 }
+
+.colorDark{
+    color: var(--clr1);
+}
+
 .changeColor1 {
     background-color: var(--clr2);
 }
